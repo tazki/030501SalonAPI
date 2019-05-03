@@ -1,0 +1,575 @@
+/*---------------NAILARTIST CSS TABLE OF CONTENTS--------------------------*/
+/* 1. RESET */
+/* 2. HELPERS */
+/* 3. GENERAL */
+/* 4. LOGIN */
+/* 5. REGISTER */
+/* 6. FORGOT PASSWORD */
+/* 7. HOME */
+/* 8. POST DETAIL AND COMMENTS*/
+/* 9. FOLLOW */
+/* 10. PROFILE */
+/* 11. FOOTER */
+/* 12. SHARE */
+/* 13. SCROLL */
+/* 14. MEDIA QUERY */
+/*-------------------------------------------------------------------------*/
+
+/* 1. RESET */
+img {
+	max-width: 100%;
+}
+
+a,
+.a:hover {
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+
+.fixed-top {
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.nav-link,
+.dropdown-item {
+	font-weight: 700;
+}
+
+.navbar {
+	padding: 0.5rem 2rem;
+}
+
+.card {
+	border-radius: 6px;
+}
+
+.card-footer {
+	background-color: transparent !important;
+}
+
+.card-footer .link:hover {
+	text-decoration: none;
+}
+
+textarea {
+	resize: none;
+}
+
+.modal-body {
+	max-height: calc(100vh - 195px);
+	overflow-y: auto;
+}
+
+.card-columns .card {
+	border: 1px solid #d1d7dc;
+	-webkit-box-shadow: 0px 3px 12px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 3px 12px 1px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	border-radius: 6px;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	margin-top: 10px;
+	animation: fadein 2s;
+	-moz-animation: fadein 2s;
+	-webkit-animation: fadein 2s;
+	-o-animation: fadein 2s;
+}
+
+.card-columns .card:hover {
+	-webkit-transform: translateY(-8px);
+	-moz-transform: translateY(-8px);
+	-ms-transform: translateY(-8px);
+	-o-transform: translateY(-8px);
+	transform: translateY(-8px);
+}
+
+.card-text {
+	font-size: 14px;
+	display: block;
+	display: -webkit-box;
+	max-width: 400px;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1.625;
+	text-align: justify;
+}
+
+/* 1. RESET */
+/* 2. HELPERS */
+.border-round-0 {
+	border-radius: 0;
+}
+
+.mt-neg100 {
+	margin-top: -100px;
+}
+
+.min-50vh {
+	min-height: 50vh;
+}
+
+.no-gutters>.col,
+.no-gutters>[class*="col-"] {
+	padding-right: 5px !important;
+	padding-left: 5px !important;
+}
+
+.text-decor-none {
+	text-decoration: none !important;
+}
+
+.max-width-none {
+	max-width: none;
+}
+
+.text-truncate {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* 2. HELPERS */
+/* 3. GENERAL */
+#nailartist-search,
+#nailartist-search-wrapper {
+	width: 100%
+}
+
+.nav-item-notification {
+	font-size: 25px;
+}
+
+.dropdown-item-body {
+    -ms-flex: 1;
+    flex: 1;
+    white-space: normal;
+    min-width: 0;
+}
+.dropdown-notification-item {
+	width: 100%;
+	padding: .5rem 1rem;
+	clear: both;
+	font-weight: 400;
+	color: #191927;
+	text-align: inherit;
+	white-space: nowrap;
+	background-color: transparent;
+    border: 0;
+    padding-top: .75rem;
+	padding-bottom: .75rem;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	text-decoration: none;
+}
+
+.dropdown-notification-item .user-avatar {
+	position: relative;
+	margin-bottom: 0;
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	font-size: 2rem;
+	vertical-align: middle;
+	border-radius: 4rem;
+}
+
+.dropdown-notification-item .user-avatar img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 4rem;
+	-o-object-fit: cover;
+	object-fit: cover;
+	-o-object-position: top;
+	object-position: top;
+}
+
+
+.dropdown-item-body:not(:first-child) {
+	padding-left: 1rem;
+}
+
+.dropdown-notification-item .date {
+	font-size: .75rem;
+	color: #888c9b;
+}
+
+.dropdown-notification-item.unread .subject,
+.dropdown-notification-item.unread .text {
+	font-weight: 600;
+	color: #363642;
+}
+
+.dropdown-notification-item .subject {
+	font-size: .75rem;
+	color: #222230;
+}
+
+.dropdown-notification-item .date,
+.dropdown-notification-item .subject,
+.dropdown-notification-item .text {
+	margin-bottom: 0;
+	line-height: 1.4;
+}
+
+
+.nailartist-profile-img {
+	object-fit: cover;
+	height: 40px;
+	width: 40px;
+	border: 3px solid #f8f9fa;
+	max-width: none;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes heartbeat {
+	to {
+		transform: scale(1.6);
+	}
+}
+
+.heart-liked {
+	color: red;
+	animation: heartbeat .25s infinite alternate;
+	animation-iteration-count: 4;
+	transform-origin: center;
+}
+
+.nailartist-card .card-footer span {
+	font-size: 15px;
+}
+
+.nailartist-username {
+	color: black;
+	font-size: 14px;
+}
+
+.nailartist-date {
+	font-size: 12px;
+}
+
+.nailartist-location {
+	font-size: 12px;
+}
+
+.nailartist-tag a {
+	margin-right: 5px;
+}
+
+/* 3. GENERAL */
+/* 4. HOME */
+#nailartist-top-trending {
+	position: absolute;
+	z-index: 90;
+	color: white;
+	left: 23px;
+	background: #4e555b;
+	padding: 5px;
+	border-radius: 4px;
+	top: 7px;
+	font-size: 16px;
+	margin: 0;
+}
+
+.owl-item {
+	text-align: center;
+}
+
+.owl-theme .owl-nav button {
+	background: transparent;
+	color: #869791;
+	font-size: 30px !important;
+	line-height: 300px !important;
+	margin: 0;
+	padding: 0 60px;
+	position: absolute;
+	top: 0;
+}
+
+.owl-theme .owl-nav .owl-prev {
+	left: 0;
+	padding-left: 20px;
+}
+
+.owl-theme .owl-nav .owl-next {
+	right: 0;
+	padding-right: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+	outline: none;
+}
+
+.owl-nav.disabled {
+	display: block !important;
+}
+
+.nailartist-card-slider {
+	background-size: 100% 100%;
+	height: 300px;
+}
+
+.nailartist-card-slider .nailartist-username,
+.nailartist-card-slider .nailartist-date {
+	color: white;
+	text-align: left;
+}
+
+.nailartist-card-slider .fader {
+	content: "";
+	background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.7));
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.7));
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	transition: all 0.2s ease;
+	display: block;
+	border-radius: 8px;
+}
+
+.nailartist-card-slider .nailartist-card-slider-meta {
+	position: absolute;
+	bottom: 5px;
+}
+
+.nailartist-card-slider-meta img.nailartist-profile-img {
+	width: 40px !important;
+}
+
+/* 4. HOME */
+/* 8. POST DETAILS AND COMMENT */
+.nailartist-comment-meta a {
+	font-size: 16px;
+}
+
+.nailartist-comment-body {
+	font-size: 14px;
+}
+
+/* 8. POST DETAILS AND COMMENT */
+/* 9. FOLLOW */
+.nailartist-card-follow .card-header {
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	height: 175px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: 0px;
+	border-radius: 0px;
+}
+
+.nailartist-card-follow .nailartist-profile-img {
+	margin-top: -50px;
+	margin-bottom: 5px;
+	border: 3px solid #f8f9fa;
+	object-fit: cover;
+	height: 70px;
+	width: 70px;
+}
+
+/* 9. FOLLOW */
+/* 10. PROFILE */
+.nailartist-profile-bg {
+	min-height: 60vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.nailartist-profile .nailartist-profile-img {
+	object-fit: cover;
+	height: 150px;
+	width: 150px;
+	border: 3px solid #f8f9fa;
+	max-width: none;
+}
+
+/* 10. PROFILE */
+/* 11. FOOTER */
+footer.footer {
+	border-top: 1px solid #f1f1f1;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	background: white;
+}
+
+/* 11. FOOTER */
+/* 12. SHARE */
+#nailartist-share-modal .modal-header {
+	padding: 5px 15px;
+}
+
+#nailartist-share-modal ul {
+	padding: 0px;
+	margin: 0;
+	list-style: none;
+}
+
+#nailartist-share-modal li {
+	color: #fff;
+}
+
+#nailartist-share-modal ul li:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+#nailartist-share-modal li a {
+	text-transform: uppercase;
+	color: #fff;
+	font-weight: 700;
+	width: 100%;
+}
+
+#nailartist-share-modal li a.btn-facebook {
+	background: #3b5998;
+}
+
+#nailartist-share-modal li a.btn-pinterest {
+	background: #cb2027;
+}
+
+#nailartist-share-modal li a.btn-twitter {
+	background: #55acee;
+}
+
+#nailartist-share-modal li a.btn-line {
+	background: #008d00;
+}
+
+#nailartist-share-modal li i {
+	float: left;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+#nailartist-share-preview .card-body {
+	padding-top: 10px;
+}
+
+#nailartist-share-preview .card-footer {
+	display: none;
+}
+
+/* 12. SHARE */
+/* 13. SCROLL */
+.scrolltop {
+	display: none;
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+}
+
+.scrolltop .scroll {
+	position: absolute;
+	right: 20px;
+	bottom: 60px;
+	background: #343a40 !important;
+	padding: 10px;
+	text-align: center;
+	margin: 0 0 0 0;
+	cursor: pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+}
+
+.scrolltop .scroll .fa {
+	font-size: 30px;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	color: white;
+	top: 5px;
+	position: relative;
+}
+
+/* 13. SCROLL */
+/* 14. MEDIA QUERY */
+@media (min-width: 576px) {
+	.card-columns {
+		-webkit-column-count: 4;
+		column-count: 4;
+	}
+}
+
+/* 14. MEDIA QUERY */
+
+.custom-file-control {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	left: 0;
+	z-index: 5;
+	height: 2.5rem;
+	padding: .5rem 1rem;
+	line-height: 1.5;
+	color: #555;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: .25rem;
+	cursor: pointer;
+}
